@@ -21,7 +21,8 @@ const loop = setInterval(() => {
     player.style.left = `${playerPosition}px ` 
 
     player.src = './images/mario/game-over.png'
-    player.style.width = '75px'
+    player.style.height = '100px'
+    player.style.width = 'auto'
     player.style.marginLeft = '50px'
 
     clearInterval(loop)

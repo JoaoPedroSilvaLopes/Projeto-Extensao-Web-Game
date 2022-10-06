@@ -4,19 +4,45 @@
   box-sizing: border-box;
 }
 
+.gameboy {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .borda {
+  background-color: black;
+} */
+
 .game-board {
-  width: 100%;
-  height: 500px;
-  border-bottom: 25px solid rgb(35, 160, 35);
+  width: 80%;
+  height: 315px;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(#87CEEB, #E0F6FF);
+  background-image: url('../images/mario/background.png');
+  background-repeat: repeat-x;
+}
+
+.top-grass {
+  width: 80%;
+  height: 24px;
+  background-image: url('../images/mario/grama.png');
+  background-repeat: repeat-x;
+}
+
+.bottom-grass {
+  width: 80%;
+  height: 200px;
+  background-image: url('../images/mario/terreno.png');
+  background-repeat: repeat;
 }
 
 .player {
   position: absolute;
-  width: 150px;
+  width: 80px;
   bottom: 0;
 }
 
@@ -27,14 +53,14 @@
 .pipe {
   position: absolute;
   bottom: 0;
-  width: 60px;
+  height: 60px;
   animation: pipe-animation 2s infinite linear;
 }
 
 .clouds {
   position: absolute;
   top: 50px;
-  width: 400px;
+  height: 150px;
   animation: clouds-animation 20s infinite linear;
 }
 
