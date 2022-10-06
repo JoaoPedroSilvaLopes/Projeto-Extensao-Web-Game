@@ -1,23 +1,48 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(171, 236, 245);
+  overflow: hidden;
 }
 
 .gameboy {
-  height: 100vh;
+  height: 60vh;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #999;
+  border-radius: 50px;
+}
+
+.border {
+  height: 80%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+
+  border-left: 90px solid #ccc;
+  border-right: 90px solid #ccc;
+  border-top: 30px solid #ccc;
+  border-bottom: 30px solid #ccc;
+  border-radius: 30px;
 }
 
-/* .borda {
-  background-color: black;
-} */
+.test {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(150, 111, 3, 0.158);
+  z-index: 1000;
+}
 
 .game-board {
-  width: 80%;
+  width: 100%;
   height: 315px;
   margin: 0 auto;
   position: relative;
@@ -27,14 +52,14 @@
 }
 
 .top-grass {
-  width: 80%;
+  width: 100%;
   height: 24px;
   background-image: url('../images/mario/grama.png');
   background-repeat: repeat-x;
 }
 
 .bottom-grass {
-  width: 80%;
+  width: 100%;
   height: 200px;
   background-image: url('../images/mario/terreno.png');
   background-repeat: repeat;
