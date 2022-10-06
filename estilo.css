@@ -48,21 +48,21 @@ body {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  background-image: url('../images/fundo/mario.png');
+  background-image: url('./images/fundo/mario.png');
   background-repeat: repeat-x;
 }
 
 .top-grass {
   width: 100%;
   height: 24px;
-  background-image: url('../images/chao/mario.png');
+  background-image: url('./images/chao/mario.png');
   background-repeat: repeat-x;
 } 
 
 .bottom-grass {
   width: 100%;
   height: 200px;
-  background-image: url('../images/terra/mario.png');
+  background-image: url('./images/terra/mario.png');
   background-repeat: repeat;
 }
 
