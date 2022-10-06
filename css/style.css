@@ -25,6 +25,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
+  background-color: #fff;
 
   border-left: 90px solid #ccc;
   border-right: 90px solid #ccc;
@@ -33,7 +34,7 @@ body {
   border-radius: 30px;
 }
 
-.test {
+.filtro {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -43,25 +44,25 @@ body {
 
 .game-board {
   width: 100%;
-  height: 315px;
+  height: 465px;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  background-image: url('../images/mario/background.png');
+  background-image: url('../images/fundo/mario.png');
   background-repeat: repeat-x;
 }
 
 .top-grass {
   width: 100%;
   height: 24px;
-  background-image: url('../images/mario/grama.png');
+  background-image: url('../images/chao/mario.png');
   background-repeat: repeat-x;
-}
+} 
 
 .bottom-grass {
   width: 100%;
   height: 200px;
-  background-image: url('../images/mario/terreno.png');
+  background-image: url('../images/terra/mario.png');
   background-repeat: repeat;
 }
 
@@ -85,8 +86,8 @@ body {
 .clouds {
   position: absolute;
   top: 50px;
-  height: 150px;
-  animation: clouds-animation 20s infinite linear;
+  height: 100px;
+  animation: clouds-animation 15s infinite linear;
 }
 
 @keyframes jump-animation {
@@ -123,7 +124,7 @@ body {
 
 @keyframes clouds-animation {
   from {
-    right: -50%;
+    right: -30%;
   }
 
   to {

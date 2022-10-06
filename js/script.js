@@ -13,20 +13,20 @@ const loop = setInterval(() => {
   const pipePosition = pipe.offsetLeft
   const playerPosition = +window.getComputedStyle(player).bottom.replace('px', '')
 
-  if (pipePosition <= 120 && pipePosition > 0 &&  playerPosition < 80) {
-    pipe.style.animation = 'none'
-    pipe.style.left = `${pipePosition}px ` 
+  // if (pipePosition <= 120 && pipePosition > 0 &&  playerPosition < 80) {
+  //   pipe.style.animation = 'none'
+  //   pipe.style.left = `${pipePosition}px ` 
 
-    player.style.animation = 'none'
-    player.style.left = `${playerPosition}px ` 
+  //   player.style.animation = 'none'
+  //   player.style.left = `${playerPosition}px ` 
 
-    player.src = './images/mario/game-over.png'
-    player.style.height = '100px'
-    player.style.width = 'auto'
-    player.style.marginLeft = '50px'
+  //   player.src = './images/dinossauro/game-over.png'
+  //   player.style.height = '60px'
+  //   player.style.width = 'auto'
+  //   player.style.marginLeft = '50px'
 
-    clearInterval(loop)
-  }
+  //   clearInterval(loop)
+  // }
 
 }, 10);
 
