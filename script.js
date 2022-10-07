@@ -15,16 +15,7 @@ function jump () {
 };
 
 function reiniciar () {
-  pontuacao.innerHTML = 'Pontuação: 00 pts'
-  fim.style.zIndex = "-1"
-
-  //personagem.style.animation = "none"
-  obstaculo.style.animation = "none"
-  nuvem.style.animation = "none"
-
-  personagem.style.marginLeft = "0px"
-  obstaculo.style.marginLeft = "2000px"
-  nuvem.style.marginLeft = "2000px"
+  location.reload()
 }
 
 function iniciar () {
@@ -47,11 +38,13 @@ function iniciar () {
       clearInterval(loop)
       fim.style.zIndex = "1000"
     }
-    // else {
-    //   contador++
-    //   pontuacao.innerHTML = `Pontuação: ${contador} pts`
-    // }
+    else {
+      contador++
+      pontuacao.innerHTML = `Pontuação: ${contador} pts`
+    }
   }, 10);
 }
 
-document.addEventListener("keydown", jump);
+document.addEventListener("keydown", (event) => {
+  if(event.code === "Space" || event.code === 'ArrowUp') jump()
+});
