@@ -4,14 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="estilo.css" />
     <title>Projeto-extensão</title>
   </head>
   <body>
     <div class="main">
       <div class="content">
+        <div class="fim">
+          FIM DE JOGO
+        </div>
         <div class="game">
-          <p>Score: 00 pts</p>
+          <p class="pontos">Pontuação: 00 pts</p>
           <div class="filtro"></div>
           <div class="game-board">
             <img src="./images/ceu/mario.png" class="clouds" />
@@ -28,11 +31,11 @@
             BROS
           </h1>
 
-          <button class="start">Iniciar</button>
-          <button class="restart">Reiniciar</button>
+          <button class="start" onClick="iniciar()">Iniciar</button>
+          <button class="restart" onClick="reiniciar()">Reiniciar</button>
         </div>
       </div>
     </div>
-    <script src="./js/script.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>

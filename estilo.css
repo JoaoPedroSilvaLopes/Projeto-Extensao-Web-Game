@@ -25,10 +25,22 @@ body {
 }
 
 .content {
+  position: absolute;
   background-color: #fff;
   display: grid;
   grid-template-columns: 1000px 400px;
-  height: 80%;
+  height: 65%;
+}
+
+.fim {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: #f8040425;
+  z-index: -1;
+
+  font-size: 3rem;
 }
 
 .game {
