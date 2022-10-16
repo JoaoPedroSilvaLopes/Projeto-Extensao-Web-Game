@@ -1,4 +1,4 @@
-## :joystick: Web_Game
+## :joystick: Web Game
 
 <p align="center">
   <img width="1000" height="550" src=".github/web-game.gif">
