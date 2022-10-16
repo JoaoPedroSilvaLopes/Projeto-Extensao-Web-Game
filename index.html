@@ -1,27 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="pt-br=">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilo.css" />
+    <title>Projeto-extensão</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="content">
+        <div class="fim">
+          FIM DE JOGO
+        </div>
+        <div class="game">
+          <p class="pontos">Pontuação: 00 pts</p>
+          <div class="filtro"></div>
+          <div class="game-board">
+            <img src="./images/ceu/mario.png" class="clouds" />
+            <img src="./images/personagens/mario.gif" class="player" />
+            <img src="./images/obstaculo/mario.png" class="pipe" />
+          </div>
+          <div class="top-grass"></div>
+          <div class="bottom-grass"></div>
+        </div>
 
-	<link rel="stylesheet" href="./estilo.css">
+        <div class="menu"> 
+          <h1>
+            MARIO <br />
+            BROS
+          </h1>
 
-	<title>Jump Game</title>
-</head>
-<body>
-	<div class="gameboy">
-		<div class="border">
-			<div class="filtro"></div>
-			<div class="game-board">
-				<img src="./images/ceu/mario.png" class="clouds">
-				<img src="./images/personagens/mario.gif" class="player">
-				<img src="./images/obstaculo/mario.png" class="pipe">
-			</div> 
-			<div class="top-grass"></div>
-			<div class="bottom-grass"></div>
-		</div>	
-	</div>
-	<script src="./js/script.js"></script>
-</body>
+          <button class="start" onClick="iniciar()">Iniciar</button>
+          <button class="restart" onClick="reiniciar()">Reiniciar</button>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
 </html>
