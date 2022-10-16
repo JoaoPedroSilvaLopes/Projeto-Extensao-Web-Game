@@ -1,34 +1,50 @@
-const player = document.querySelector('.player')
-const pipe = document.querySelector('.pipe')
+const personagem = document.querySelector(".player")
+const obstaculo = document.querySelector(".pipe")
+const nuvem = document.querySelector(".clouds")
+const pontuacao = document.querySelector('.pontos')
+const fim = document.querySelector(".fim")
 
-const jump = () => {
-  player.classList.add('jump')
+let contador = 0
+
+function jump () { 
+  personagem.classList.add("jump");
 
   setTimeout(() => {
-    player.classList.remove('jump')
-  }, 500)  
+    personagem.classList.remove("jump");
+  }, 500);
+};
+
+function reiniciar () {
+  location.reload()
 }
 
-const loop = setInterval(() => {
-  const pipePosition = pipe.offsetLeft
-  const playerPosition = +window.getComputedStyle(player).bottom.replace('px', '')
+function iniciar () {
+  const loop = setInterval(() => {
+    obstaculo.style.animation = "pipe-animation 2s infinite linear"
+    nuvem.style.animation = "clouds-animation 15s infinite linear"
 
-  // if (pipePosition <= 120 && pipePosition > 0 &&  playerPosition < 80) {
-  //   pipe.style.animation = 'none'
-  //   pipe.style.left = `${pipePosition}px ` 
+    const obstaculoPosition = obstaculo.offsetLeft;
+    const personagemPosition = +window.getComputedStyle(personagem).bottom.replace("px", "")
 
-  //   player.style.animation = 'none'
-  //   player.style.left = `${playerPosition}px ` 
+    if (obstaculoPosition <= 120 && obstaculoPosition > 0 && personagemPosition < 80) {
+      obstaculo.style.animation = "none"
+      obstaculo.style.left = `${obstaculoPosition}px `
 
-  //   player.src = './images/dinossauro/game-over.png'
-  //   player.style.height = '60px'
-  //   player.style.width = 'auto'
-  //   player.style.marginLeft = '50px'
+      personagem.style.animation = "none"
+      personagem.style.left = `${personagemPosition}px `
 
-  //   clearInterval(loop)
-  // }
+      personagem.style.marginLeft = "50px"
 
-}, 10);
+      clearInterval(loop)
+      fim.style.zIndex = "1000"
+    }
+    else {
+      contador++
+      pontuacao.innerHTML = `Pontuação: ${contador} pts`
+    }
+  }, 10);
+}
 
-document.addEventListener('keydown', jump)  
-  
+document.addEventListener("keydown", (event) => {
+  if(event.code === "Space" || event.code === 'ArrowUp') jump()
+});
