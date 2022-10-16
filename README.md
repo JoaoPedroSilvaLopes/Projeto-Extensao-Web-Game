@@ -1,7 +1,7 @@
 ## :joystick: Web Game
 
 <p align="center">
-  <img width="1000" height="550" src=".github/web-game.gif">
+  <img width="1000" height="600" src=".github/web-game.gif">
 </p>
 
 ## :file_folder: Sobre o projeto
