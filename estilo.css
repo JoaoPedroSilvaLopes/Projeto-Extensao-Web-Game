@@ -1,45 +1,73 @@
+/* Configurações globais */
+
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto&display=swap");
+
+* {
+  font-family: "Press Start 2P";
+}
+
+:root {
+  --background-color-buttons: #2b2823;
+  --background-color-menu: #e6d3b6;
+  --background-principal: #383734;
+  --color-texto-mario-bros: #534c36;
+}
+
 body {
+  margin: 0;
+  background-color: var(--background-principal);
+}
+
+/* game sem os estilos */
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(171, 236, 245);
-  overflow: hidden;
 }
 
-.gameboy {
-  height: 60vh;
-  width: 75%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #999;
-  border-radius: 50px;
-}
-
-.border {
-  height: 80%;
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+.content {
+  position: absolute;
   background-color: #fff;
+  display: grid;
+  grid-template-columns: 1000px 400px;
+  height: 65%;
+  position: relative;
+}
 
-  border-left: 90px solid #ccc;
-  border-right: 90px solid #ccc;
-  border-top: 30px solid #ccc;
-  border-bottom: 30px solid #ccc;
-  border-radius: 30px;
+.game {
+  background-color: var(--color-texto-mario-bros);
+  position: relative;
+}
+
+.game p {
+  position: absolute;
+  font-weight: bold;
+  font-size: 1.75rem;
+  color: var(--color-texto-mario-bros);
+  padding: 0.25rem 1rem;
+  z-index: 1;
+}
+
+/* game com os estilos */
+
+.fim {
+  display: flex;
+  height: 100%;
+  width: calc(100% - 398px);
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: #00000062;
+  z-index: -1;
+  font-size: 4rem;
 }
 
 .filtro {
   position: absolute;
   width: 100%;
-  height: 100%;
   background-color: rgba(150, 111, 3, 0.158);
-  z-index: 1000;
 }
 
 .game-board {
@@ -48,22 +76,8 @@ body {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  background-image: url('./images/fundo/mario.png');
-  background-repeat: repeat-x;
-}
-
-.top-grass {
-  width: 100%;
-  height: 24px;
-  background-image: url('./images/chao/mario.png');
-  background-repeat: repeat-x;
-} 
-
-.bottom-grass {
-  width: 100%;
-  height: 200px;
-  background-image: url('./images/terra/mario.png');
-  background-repeat: repeat;
+  background-image: url("./images/fundo/mario.png");
+  background-size: contain;
 }
 
 .player {
@@ -87,7 +101,22 @@ body {
   position: absolute;
   top: 50px;
   height: 100px;
+  z-index: 100;
   animation: clouds-animation 15s infinite linear;
+}
+
+.top-grass {
+  width: 100%;
+  height: 24px;
+  background-image: url("./images/chao/mario.png");
+  background-repeat: repeat-x;
+}
+
+.bottom-grass {
+  width: 100%;
+  height: 160px;
+  background-image: url("./images/terra//mario.png");
+  background-repeat: repeat;
 }
 
 @keyframes jump-animation {
@@ -130,4 +159,42 @@ body {
   to {
     right: 100%;
   }
+}
+
+
+/* Menu */
+.menu {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color-menu);
+}
+
+.menu h1 {
+  color: var(--color-texto-mario-bros);
+  font-size: 2.5rem;
+  line-height: 150%;
+  text-align: center;
+  margin-top: 6rem;
+}
+
+.start,
+.restart {
+  font-size: 1rem;
+  padding: 1.25rem;
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: filter 0.3s linear;
+  background-color: var(--color-texto-mario-bros);
+  box-shadow: 3px 3px 0px var(--color-texto-mario-bros);
+}
+
+.start:hover,
+.restart:hover {
+  filter: brightness(0.9);
 }
